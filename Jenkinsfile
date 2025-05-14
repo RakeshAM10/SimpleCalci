@@ -22,7 +22,14 @@
      stage('Run Application') {  
             steps { 
                 sh 'java –jar target/SimpleCalci-0.0.1-SNAPSHOT.jar'  
-            } 
+            }
+      agent {
+          docker {
+    image 'maven:3.8.6-openjdk-17'
+    label 'your-agent-label'
+  }
+}
+
       } 
     } 
 }
