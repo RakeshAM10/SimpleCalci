@@ -6,7 +6,7 @@
     stages { 
         stage('Checkout') {  
             steps { 
-                git branch: 'master', url: 'https://github.com/mtechkiran/SimpleCalci.git'  
+                git branch: 'master', url: 'https://github.com/RakeshAM10/SimpleCalsi.git'  
             } 
     } 
      stage('Build') {  
@@ -21,7 +21,7 @@
       } 
      stage('Run Application') {  
             steps { 
-                sh 'java –jar target/SimpleCalci-0.0.1-SNAPSHOT.jar'  
+                sh 'java –jar target/SimpleCalsi-0.0.1-SNAPSHOT.jar'  
             }
 
 
