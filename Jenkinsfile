@@ -24,10 +24,11 @@ pipeline {
             } 
         } 
 
-        stage('Run Application') {  
-            steps { 
-                bat 'java -jar target/SimpleCalci-0.0.1-SNAPSHOT.jar'  
-            } 
-        } 
+       stage('Run Application') {  
+              steps { 
+        sh 'java -jar target/SimpleCalci-0.0.1-SNAPSHOT.jar 10 5'  
+    }
+}
+
     } 
 }
