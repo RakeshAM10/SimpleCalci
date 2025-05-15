@@ -1,7 +1,7 @@
  pipeline { 
     agent any 
     tools { 
-          maven ' Maven' //Ensure name matches with configured  
+          maven 'Maven' //Ensure name matches with configured  
     } 
     stages { 
         stage('Checkout') {  
