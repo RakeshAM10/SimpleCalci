@@ -8,7 +8,7 @@ pipeline {
     stages { 
         stage('Checkout') {  
             steps { 
-                git branch: 'master', url: 'https://github.com/RakeshAM10/SimpleCalsi.git'  
+                git branch: 'master', url: 'https://github.com/RakeshAM10/SimpleCalci.git'  
             } 
         } 
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run Application') {  
             steps { 
-                bat 'java -jar target/SimpleCalsi-0.0.1-SNAPSHOT.jar'  
+                bat 'java -jar target/SimpleCalci-0.0.1-SNAPSHOT.jar'  
             } 
         } 
     } 
