@@ -115,3 +115,13 @@ for exp : 2C
         <scope>provided</scope>
     </dependency>
 </dependencies>
+
+
+for exp: 3
+tasks.withType(Jar) {
+    manifest {
+        attributes(
+            'main-class': 'org.example.App'
+        )
+    }
+}
