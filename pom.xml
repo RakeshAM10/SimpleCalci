@@ -59,3 +59,42 @@
     </plugins>
   </build>
 </project>
+
+
+package yourpackagename;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+@WebServlet("/mservlet")
+public class MServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public MServlet() {
+        super();
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.getWriter().append("Hello: ").append(request.getParameter("name"));
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
+}
+
+
+for exp : 2C
+<dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>  <!-- or the version matching your server -->
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
